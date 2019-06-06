@@ -5,7 +5,7 @@
 #step is the iteration step of the trained model
 step=34999
 
-cuda=2
+cuda=3
 
 rm -rf ./VOC2007/VOCdevkit2007/annotations_cache
 
@@ -19,4 +19,10 @@ rm -rf ./VOC2007/VOCdevkit2007/annotations_cache
 
 CUDA_VISIBLE_DEVICES=$cuda python tools/test_net.py --dataset voc2007 --cfg configs/baselines/e2e_mask_rcnn_X-152-32x8d-FPN-IN5k_1.44x.yaml \
          --load_ckpt /mnt/md126/zhangjunyi/365-object-detection/Outputs/voc2007/e2e_mask_rcnn_X-152-32x8d-FPN-IN5k_1.44x/May29-21-54-03_ubuntu_step/ckpt/model_step$step.pth #--vis #--multi-gpu-testing
+#CUDA_VISIBLE_DEVICES=$cuda python tools/test_net.py --dataset voc2007 --cfg configs/baselines/e2e_mask_rcnn_X-152-32x8d-FPN-IN5k_1.44x.yaml \
+         #--load_ckpt /mnt/md126/zhangjunyi/365-object-detection/Outputs/voc2007/e2e_mask_rcnn_X-152-32x8d-FPN-IN5k_1.44x/May31-14-19-50_ubuntu_step/ckpt/model_step$step.pth #--vis #--multi-gpu-testing
+#CUDA_VISIBLE_DEVICES=$cuda python tools/test_net.py --dataset voc2007 --cfg configs/baselines/e2e_mask_rcnn_X-101-64x4d-FPN_2x.yaml \
+         #--load_ckpt /mnt/md126/zhangjunyi/365-object-detection/Outputs/voc2007/e2e_mask_rcnn_X-101-64x4d-FPN_2x/Jun01-11-45-23_ubuntu_step/ckpt/model_step$step.pth #--vis #--multi-gpu-testing
+#CUDA_VISIBLE_DEVICES=$cuda python tools/test_net.py --dataset voc2007 --cfg configs/baselines/e2e_mask_rcnn_X-152-32x8d-FPN-IN5k_1.44x.yaml \
+         #--load_ckpt /mnt/md126/zhangjunyi/365-object-detection/Outputs/voc2007/e2e_mask_rcnn_X-152-32x8d-FPN-IN5k_1.44x/Jun01-21-53-00_ubuntu_step/ckpt/model_step$step.pth #--vis #--multi-gpu-testing
 
